@@ -1,24 +1,24 @@
 <div class="card-item col">
-  {% if project.redirect %}
-  <a href="{{ project.redirect }}" target="_blank">
+  {% if talk.redirect %}
+  <a href="{{ talk.redirect }}" target="_blank">
   {% else %}
-  <a href="{{ project.url | relative_url }}">
+  <a href="{{ talk.url | relative_url }}">
   {% endif %}
     <div class="card hoverable">
       <div class="row g-0">
-        {% if project.img %}
+        {% if talk.img %}
         <div class="card-img col-md-6">
-          <img src="{{ project.img | relative_url }}" alt="project thumbnail">
+          <img src="{{ talk.img | relative_url }}" alt="talk thumbnail">
         </div>
         <div class="col-md-6">
         {% else %}
         <div class="col-md-12">
         {% endif %}
           <div class="card-body">
-            <h3 class="card-title text-lowercase">{{ project.title }}</h3>
-            <p class="card-text">{{ project.description }}</p>
+            <h3 class="card-title">{{ talk.title }}</h3>
+            <p class="card-text">{{ talk.description }}</p>
             <div class="row ml-1 mr-1 p-0">
-              {% if project.github %}
+              <!-- {% if project.github %}
               <div class="github-icon">
                 <div class="icon" data-toggle="tooltip" title="Code Repository">
                   <a href="{{ project.github }}" target="_blank"><i class="fab fa-github gh-icon"></i></a>
@@ -30,7 +30,7 @@
                 </span>
                 {% endif %}
               </div>
-              {% endif %}
+              {% endif %} -->
             </div>
           </div>
         </div>
